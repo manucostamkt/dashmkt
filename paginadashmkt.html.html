@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>DASHBOARD MARKETING VIANA E MOURA CONSTRUÇÕES</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      margin: 0;
+      padding-top: 60px;
+    }
+
+    header {
+      background-color: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    h1 {
+      color: #E69500;
+      font-size: 24px;
+      margin: 0 auto;
+    }
+
+    .button-group {
+      margin: 20px;
+    }
+
+    button {
+      background-color: #E69500;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cc7e00;
+    }
+
+    iframe {
+      width: 90%;
+      height: 600px;
+      border: none;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DASHBOARD MARKETING VIANA E MOURA CONSTRUÇÕES</h1>
+  </header>
+
+  <div class="button-group">
+    <button onclick="loadBI('https://app.powerbi.com/view?r=eyJrIjoiNzRkMTBlZGEtZGMwNy00NzRlLWJkMDUtZTEwZDBmY2M3ODAyIiwidCI6IjYzYzQ3NGU2LWQ4YjItNGM1Mi1hMTM0LTk0Y2EzZDYyNDYzNCJ9')">Análise de Vendas</button>
+    <button onclick="loadBI('https://app.powerbi.com/view?r=eyJrIjoiM2NkYWFiOWQtYzM1Yy00NjdhLWEyOGMtYTRmN2U2YTMxZGMyIiwidCI6IjYzYzQ3NGU2LWQ4YjItNGM1Mi1hMTM0LTk0Y2EzZDYyNDYzNCJ9')">Análise Comercial</button>
+    <button onclick="loadBI('https://app.powerbi.com/view?r=eyJrIjoiNzVkNzE0MjMtNWI1Yi00OWRmLTgxOWItZjM2OWE2N2Y3MDRlIiwidCI6IjYzYzQ3NGU2LWQ4YjItNGM1Mi1hMTM0LTk0Y2EzZDYyNDYzNCJ9')">Análise de Vendas</button>
+  </div>
+
+  <iframe id="biFrame" src="https://app.powerbi.com/view?r=eyJrIjoiNzRkMTBlZGEtZGMwNy00NzRlLWJkMDUtZTEwZDBmY2M3ODAyIiwidCI6IjYzYzQ3NGU2LWQ4YjItNGM1Mi1hMTM0LTk0Y2EzZDYyNDYzNCJ9"></iframe>
+
+  <script>
+    function loadBI(link) {
+      document.getElementById('biFrame').src = link;
+    }
+  </script>
+</body>
+</html>
